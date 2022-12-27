@@ -43,7 +43,7 @@ function MyTimer({ expiryTimestamp, autoStart, setExpired }) {
 
 function Main() {
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 1500);
+  time.setSeconds(time.getSeconds() + 15);
   const timeBreak = new Date();
   timeBreak.setSeconds(time.getSeconds() + 300);
   // const [tasks, setTasks] = useState([]);
