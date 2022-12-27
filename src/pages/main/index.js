@@ -1,14 +1,5 @@
 import React, { useLayoutEffect, useState } from 'react';
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  Img,
-  Input,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Img, Text, VStack } from '@chakra-ui/react';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import { useTimer } from 'react-timer-hook';
 import ItemTodo from '../../component/molecules/itemTodo';
@@ -17,12 +8,11 @@ import ItemEditTodo from '../../component/molecules/itemEditTodo';
 import { MdAddCircleOutline } from 'react-icons/md';
 
 function MyTimer({ expiryTimestamp, autoStart, setExpired }) {
-  const { seconds, minutes, isRunning, start, pause, resume, restart } =
-    useTimer({
-      expiryTimestamp,
-      onExpire: () => setExpired(e => !e),
-      autoStart: autoStart,
-    });
+  const { seconds, minutes, start } = useTimer({
+    expiryTimestamp,
+    onExpire: () => setExpired(e => !e),
+    autoStart: autoStart,
+  });
 
   return (
     <div style={{ textAlign: 'center' }}>
@@ -187,6 +177,7 @@ function Main() {
                 />
                 <Box mt={4} />
                 <iframe
+                  title="space-game"
                   src="https://itch.io/embed-upload/6971421?color=000000"
                   allowfullscreen=""
                   width="100%"

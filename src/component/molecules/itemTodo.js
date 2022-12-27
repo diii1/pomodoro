@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  IconButton,
-  Img,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Button, Flex, Text } from '@chakra-ui/react';
 import { FaTrash } from 'react-icons/fa';
 import { RiEdit2Fill } from 'react-icons/ri';
 function ItemTodo(props) {
